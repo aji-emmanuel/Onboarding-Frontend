@@ -1,0 +1,96 @@
+.modal {
+  background-color: #cbe8f1;
+  height: auto;
+}
+
+.modal-content form label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  color: #00364c;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.modal-content,
+.form-footer {
+  background-color: none;
+}
+
+.modal-content h4 {
+  color: #00364c;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-footer a {
+  color: #00364c;
+  font-weight: bold;
+}
+.form-footer button,
+.space-between button {
+  background-color: #00364c;
+  color: white;
+  min-width: 5rem;
+  font-size: 0.7rem;
+  line-height: 0px;
+  margin: 0 0.5rem;
+}
+.form-footer button:hover {
+  opacity: 0.5;
+  background-color: #00364c;
+  color: white;
+}
+#employee-modal .modal-content {
+  padding: 0px !important;
+}
+#employee-modal .card-user {
+  margin: 0px;
+}
+
+.form-footer.space-between {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 4px;
+}
+.modal-content form {
+  padding: 0px;
+}
+.modal-close.btn-flat {
+  background-color: white;
+  color: #00364c;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.modal-content form textarea {
+  height: 8rem !important;
+  width: calc(100% - 2rem) !important;
+  padding: 1rem !important;
+  font-size: large;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Confirm Alerts */
+
+.react-confirm-alert-body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100% !important;
+  padding: 30px;
+  text-align: left;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 75px rgb(0 0 0 / 13%);
+  color: #666;
+}
+
+.react-confirm-alert-overlay {
+  z-index: 1100 !important;
+}

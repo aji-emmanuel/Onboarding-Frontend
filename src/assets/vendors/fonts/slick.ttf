@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The page you were looking for doesn't exist</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="/assets/landing/public-f8d71a7dd83b53f48addfef375ec1ff33c9caec3c07d12bc78f6b6d9e0862fa9.css" />
+
+  <style>
+    body {
+      background: #ffffff;
+      font-family: lato,sans-serif;
+      color: black;
+    }
+    .logo404 {
+      position: absolute;
+      left: 0;
+      top: 20px;
+      margin-left: 20px;
+    }
+    @media only screen and (max-width: 750px) {
+      .logo404 {
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+      }
+    }
+    .dialog {
+      text-align: center;
+    }
+    .page {
+      font-size: 13px;
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin: 0.83em 0;
+      font-weight: bold;
+    }
+    a {
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+  <div class="logo404">
+    <img style="width: 160px;" src="/404_logo.png?v=2" alt="">
+  </div>
+  <div class="dialog">
+    <a href="/">
+      <img style="width: 450px; max-width: 100%;" src="/404.png" alt="Page not found"/>
+    </a>
+
+    <h1>
+      Ooops,
+      <br>
+      this page doesn't exist...
+    </h1>
+
+    <h2>
+      Head back <a href="/">home</a>
+    </h2>
+  </div>
+</div>
+<footer>
+<div class='content-width space-out'>
+<div class='about'>
+<img class="logo" alt="Sage HR logo" src="/assets/logo/sage_hr_white-cf6f9d123f72f1ac96fbae55e94862963b4b024823a3d310e92eaa115033b38b.png" />
+<p>
+Sage HR (formerly CakeHR) is an HR software company that streamlines human resource management for customers in over 1,200 cities worldwide.
+</p>
+<div class='social'>
+<a href='https://sage.hr/social/facebook' target='_blank'>
+<i aria-label='Facebook' class='fab fa-facebook-f'></i>
+</a>
+<a href='https://sage.hr/social/twitter' target='_blank'>
+<i aria-label='Twitter' class='fab fa-twitter'></i>
+</a>
+<a href='https://sage.hr/social/linkedin' target='_blank'>
+<i aria-label='Linkedin' class='fab fa-linkedin-in'></i>
+</a>
+<a href='https://www.youtube.com/c/CakeHr' target='_blank'>
+<i aria-label='Youtube' class='fab fa-youtube'></i>
+</a>
+</div>
+</div>
+<div class='links'>
+<article>
+<div>
+<h4>Product</h4>
+</div>
+<ul>
+<li>
+<a href='/pricing'>Pricing</a>
+</li>
+<li>
+<a href='https://support.sage.hr/' target='_blank'>Knowledge Base</a>
+</li>
+<li>
+<a href='https://sagehr.docs.apiary.io/' target='_blank'>API</a>
+</li>
+</ul>
+</article>
+<article>
+<div>
+<h4>Company</h4>
+</div>
+<ul>
+<li>
+<a href='https://blog.cake.hr' target='_blank'>Blog</a>
+</li>
+<li>
+<a href='/about-us'>About Us</a>
+</li>
+<li>
+<a href='/contact-us'>Contact Us</a>
+</li>
+</ul>
+</article>
+</div>
+</div>
+<div class='content-width space-out'>
+<div class='mobile'>
+<a href='https://sage.hr/get-app/ios' target='_blank'>
+<div class='img-btn'>
+<div aria-label='Sage HR in Apple Store' class='apple'></div>
+</div>
+</a>
+<a href='https://sage.hr/get-app/android' target='_blank'>
+<div class='img-btn'>
+<div aria-label='Sage HR in Google Play Store' class='google'></div>
+</div>
+</a>
+</div>
+<div class='language language-top dropdown-trigger'>
+<div class='flag' style='background: -56px -70px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text has-dropdown' tabindex='0'>
+ENGLISH (english)
+</div>
+<i aria-hidden='true' class='fa fa-caret-up'></i>
+<div class='dropdown-menu' style='opacity: 0; visibility: hidden;'>
+<div class='dropdown'>
+<a class='language' href='/ar/404'>
+<div class='flag' style='background: -28px -0px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>ARABIC (العربية)</div>
+</a>
+<a class='language' href='/hy/404'>
+<div class='flag' style='background: -168px -0px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>ARMENIAN (Հայերեն)</div>
+</a>
+<a class='language' href='/fr-CA/404'>
+<div class='flag' style='background: -168px -28px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>CANADIAN FRENCH (français canadien)</div>
+</a>
+<a class='language' href='/cs/404'>
+<div class='flag' style='background: -224px -42px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>CZECH (čeština)</div>
+</a>
+<a class='language' href='/nl/404'>
+<div class='flag' style='background: -308px -140px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>DUTCH (Nederlands)</div>
+</a>
+<a class='language' href='/et/404'>
+<div class='flag' style='background: -0px -56px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>ESTONIAN (eesti)</div>
+</a>
+<a class='language' href='/fr/404'>
+<div class='flag' style='background: -336px -56px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>FRENCH (français)</div>
+</a>
+<a class='language' href='/ka/404'>
+<div class='flag' style='background: -112px -70px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>GEORGIAN (ქართული)</div>
+</a>
+<a class='language' href='/de/404'>
+<div class='flag' style='background: -252px -42px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>GERMAN (Deutsch)</div>
+</a>
+<a class='language' href='/he/404'>
+<div class='flag' style='background: -336px -84px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>HEBREW (עברית)</div>
+</a>
+<a class='language' href='/lv/404'>
+<div class='flag' style='background: -336px -112px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>LATVIAN (latviešu)</div>
+</a>
+<a class='language' href='/lt/404'>
+<div class='flag' style='background: -280px -112px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>LITHUANIAN (lietuvių)</div>
+</a>
+<a class='language' href='/pl/404'>
+<div class='flag' style='background: -224px -154px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>POLISH (polski)</div>
+</a>
+<a class='language' href='/ro/404'>
+<div class='flag' style='background: -56px -168px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>ROMANIAN (română)</div>
+</a>
+<a class='language' href='/ru/404'>
+<div class='flag' style='background: -112px -168px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>RUSSIAN (русский)</div>
+</a>
+<a class='language' href='/es/404'>
+<div class='flag' style='background: -112px -56px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>SPANISH (español)</div>
+</a>
+<a class='language' href='/th/404'>
+<div class='flag' style='background: -420px -182px / 448px 224px no-repeat url(/assets/flags-99b726fa2ff29296183746f68e778d5e7c65d43a83445e9093dc1183b829d591.png)'></div>
+<div class='text'>THAI (ไทย)</div>
+</a>
+</div>
+</div>
+</div>
+<div class='links second-links'>
+<article>
+<ul>
+<li>
+<a href='/terms-and-conditions'>Terms &amp; Conditions</a>
+</li>
+</ul>
+</article>
+<article>
+<ul>
+<li>
+<a href='/privacy-policy'>Privacy Policy</a>
+</li>
+</ul>
+</article>
+<article>
+<ul>
+<li>
+<a id='privacy-settings-link'>Privacy Settings</a>
+</li>
+</ul>
+</article>
+</div>
+</div>
+<div class='content-width'>
+<div class='about for-copyright'>
+<p class='copyright'>
+© Copyright Sage Global Services Limited,
+2021
+</p>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+.profile-nav {
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+  background-color: #e6ebed;
+  display: flex;
+}
+
+.profile-content {
+  width: 100%;
+  float: right;
+  max-height: calc(100vh - 50px);
+  overflow: auto;
+}
+.profile-content h4 {
+  color: #00364c;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-content form {
+  padding: 5%;
+}
+
+.profile-nav-button {
+  background-color: #e6ebed;
+  color: #00364c;
+  padding: 5px 15px;
+  border: none;
+  font-weight: bold;
+  opacity: 1 !important;
+  font-size: medium;
+  text-transform: none;
+  outline: none;
+  box-shadow: none !important;
+}
+.profile-content form label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #00364c;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.profile-nav-button.active {
+  color: #00364c !important;
+  background-color: #f7f7f8 !important;
+  border-color: none !important;
+}
+
+.profile-nav button :hover,
+.profile-nav button :active,
+.profile-nav button :focus {
+  background-color: white;
+  color: #00364c !important;
+}
+
+.profile-nav a {
+  color: #2f85a7;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-avatar {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #ffffff;
+  margin-bottom: 5px;
+  border-color: #eeeeee;
+  border-radius: 50%;
+}
+.profile-main {
+  margin: 0 0 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+}
+.profile-main label {
+  font-size: 1rem !important;
+  color: #706c6c !important;
+}
+
+.fas.fa-camera {
+  font-size: 30px;
+  color: red;
+  margin-left: -3rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .profile-main {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .profile-content h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .profile-nav-button {
+    font-size: 15px;
+  }
+
+  .profile-content h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Upload Profile Pic Styles */
+
+.select-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.selected-image {
+  padding-bottom: 2rem;
+  height: 150px;
+  width: 150px;
+  border: 1px dashed black;
+  border-radius: 50%;
+}
+
+.image-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.space-between.upload {
+  margin-bottom: 2rem;
+}

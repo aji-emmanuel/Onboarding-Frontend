@@ -1,0 +1,109 @@
+/* Registeration styles */
+
+.sub-main .heading .register-in-line {
+  width: 100%;
+  background-color: #ffb500;
+  height: 3px;
+}
+
+.sub-main .first-name {
+  padding-top: 0.75rem;
+}
+.sub-main label {
+  margin-bottom: 1px;
+  font-weight: 400;
+  color: wheat;
+  font-size: 20px;
+}
+.sub-main .first-name,
+.sub-main .last-name,
+.sub-main .gender,
+.sub-main .email,
+.sub-main .phone,
+.sub-main .dob,
+.sub-main .address,
+.sub-main .state {
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='submit'],
+input[type='email'] {
+  padding: 6px 3px;
+  padding-top: 10px;
+  width: 100%;
+  border-radius: 15px;
+  outline: none;
+  border: 2px solid rgb(241, 243, 244);
+}
+input[type='submit'] {
+  background-color: #ffb500;
+  color: white;
+  padding: 0.5rem 0 !important;
+  font-size: 2rem;
+  opacity: 0.8;
+  width: 100% !important;
+}
+
+input[type='submit']:hover {
+  opacity: 0.6;
+}
+
+#reg-next {
+  background-color: #ffb500;
+  color: white;
+  border: none;
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.8;
+  text-align: center;
+  width: 100%;
+}
+
+#reg-next:hover {
+  opacity: 0.6;
+}
+
+/*  Form Validations */
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
