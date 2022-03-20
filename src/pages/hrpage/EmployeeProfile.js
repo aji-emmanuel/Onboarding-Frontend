@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { connect } from "react-redux";
 import { confirmAlert } from 'react-confirm-alert';
 import Preloader from '../../components/Preloader';
-import { updateEmployee, deleteEmployee, reset } from '../../redux/actions/EmployeeAction';
+import { updateEmployee, deleteEmployee, reset } from '../../appStore/actions/EmployeeAction';
 import { Card, Form, Button } from 'react-bootstrap';
 
 const EmployeeProfile = ({error, success, reset, updateEmployee, deleteEmployee}) => {

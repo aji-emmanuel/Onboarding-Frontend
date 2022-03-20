@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../../assets/styles/forget.css'
-import { resetPassword, reset } from '../../redux/actions/AuthAction';
+import { resetPassword, reset } from '../../appStore/actions/AuthAction';
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Preloader from '../../components/Preloader';
 import Swal from 'sweetalert2';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -16,6 +17,7 @@ const ForgotPassword = ({error, success, resetPassword, reset}) => {
     const [validPwd, setValidPwd] = useState(false);
     const [pwdFocus, setPwdFocus] = useState(false);
     const [validMatch, setValidMatch] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const [formData, setFormData] = useState({
         token: "",
@@ -46,10 +48,12 @@ const ForgotPassword = ({error, success, resetPassword, reset}) => {
     // Sends form data to login user action and reset state to initial state on successful login
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         resetPassword(formData);
     };
 
     if(success){
+        setLoading(false);
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -63,6 +67,7 @@ const ForgotPassword = ({error, success, resetPassword, reset}) => {
     const [errMsg, setErrMsg] = useState('');
     // Sets error message 
     const checkError = () => {
+        setLoading(false);
         if (error?.response) {
             setErrMsg('Oops.. network or server error!');
         };
@@ -119,8 +124,10 @@ const ForgotPassword = ({error, success, resetPassword, reset}) => {
                                     Must match the first password input field.
                                 </p>
                             </div>
-                           
-                            <input  value="Submit" type="submit" />
+                            <div>
+                                <input  value="Submit" type="submit" />
+                                { loading && <Preloader /> }
+                            </div>
                              <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
                                 {errMsg}
                             </p>

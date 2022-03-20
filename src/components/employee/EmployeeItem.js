@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
-import { getEmployee } from '../../redux/actions/EmployeeAction';
+import { getEmployee } from '../../appStore/actions/EmployeeAction';
 import { Card, Col, Button } from "react-bootstrap";
 
 const EmployeeItem = ({ employee, getEmployee }) => {

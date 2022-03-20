@@ -5,8 +5,8 @@ import Swal from 'sweetalert2';
 import { Form, Button } from "react-bootstrap";
 import Preloader from '../../components/Preloader';
 import UploadAvatarModal from '../../components/modals/UploadAvatarModal';
-import { loadUser } from "../../redux/actions/AuthAction";
-import { updateUser, reset } from "../../redux/actions/UserAction";
+import { loadUser } from "../../appStore/actions/AuthAction";
+import { updateUser, reset } from "../../appStore/actions/UserAction";
 import { confirmAlert } from 'react-confirm-alert';
 
 const Profile = ({ success, error, updateUser, reset }) => {

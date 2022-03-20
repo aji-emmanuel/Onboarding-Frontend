@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Search from '../../components/Search';
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
-import { searchEmployee, getEmployees, reset } from '../../redux/actions/EmployeeAction';
+import { searchEmployee, getEmployees, reset } from '../../appStore/actions/EmployeeAction';
 import Employee from '../../components/employee/Employee';
 
 const Employees = ({searchEmployee, getEmployees, reset}) => {

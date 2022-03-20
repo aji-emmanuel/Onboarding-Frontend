@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { loadUser, logoutUser } from "../../redux/actions/AuthAction";
+import { loadUser, logoutUser } from "../../appStore/actions/AuthAction";
 import { Navbar, Nav, Dropdown, Button } from "react-bootstrap";
 
 const LayoutNavbar = ({onClick, loadUser, logoutUser}) => {

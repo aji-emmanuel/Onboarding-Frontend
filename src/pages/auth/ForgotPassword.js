@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../../assets/styles/forget.css'
 import { Link } from 'react-router-dom';
-import { confirmUser, reset } from '../../redux/actions/AuthAction';
+import { confirmUser, reset } from '../../appStore/actions/AuthAction';
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Preloader from '../../components/Preloader';
 import Swal from 'sweetalert2';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -18,10 +19,11 @@ const ForgotPassword = ({error, success, confirmUser, reset}) => {
 
     const [email, setEmail] = useState("");
     const [validEmail, setValidEmail] = useState(false);
+    const [loading, setLoading] = useState(false);
     // Re renders page whenever there is change in error
     useEffect(()=>{
         emailRef.current.focus();
-        checkError()
+        if(error !==null){checkError()}
         // eslint-disable-next-line
     }, [error]);
     // Validates email whenever there's a change in the input
@@ -32,10 +34,13 @@ const ForgotPassword = ({error, success, confirmUser, reset}) => {
      // Sends form data to login user action and reset state to initial state on successful login
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         confirmUser(email);
+        setErrMsg('');
     };
 
     if(success){
+        setLoading(false);
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -48,9 +53,8 @@ const ForgotPassword = ({error, success, confirmUser, reset}) => {
     const [errMsg, setErrMsg] = useState('');
     // Sets error message 
     const checkError = () => {
-        if (error?.response) {
-            setErrMsg('Oops.. network or server error!');
-        };
+        setLoading(false);
+        setErrMsg('Oops.. network or server error!');
         reset();
     };
 
@@ -79,8 +83,10 @@ const ForgotPassword = ({error, success, confirmUser, reset}) => {
                                         value={email}
                                         onChange={(e)=> setEmail(e.target.value)} required />
                             </div>
-                           
-                            <input  value="Submit" type="submit" />
+                            <div className='submit-div'>
+                                <input  value="Submit" type="submit" />
+                                {loading && <Preloader />}
+                            </div>
                              <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
                                 {errMsg}
                             </p>

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import "../../assets/styles/profile.css";
 import { Card, Button } from "react-bootstrap";
-import { updateAvatar } from '../../redux/actions/UserAction';
+import { updateAvatar } from '../../appStore/actions/UserAction';
 import { confirmAlert } from 'react-confirm-alert';
 import { connect } from "react-redux";
 import 'react-confirm-alert/src/react-confirm-alert.css';

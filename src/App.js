@@ -15,11 +15,7 @@ import User from "./pages/user/User";
 import UserProfile from './pages/user/UserProfile';
 import Layout from "./components/layout/Layout";
 import { Provider } from "react-redux";
-<<<<<<< HEAD
 import store from './appStore/store/Store';
-=======
-import store from './redux/store/Store';
->>>>>>> 109b059a944d55d9116d83cabd30631f6179f8f5
 import setAuthToken from './utilities/setAuthToken';
 import PrivateRoute from './utilities/PrivateRoute';
 

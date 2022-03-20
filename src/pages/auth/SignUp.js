@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/login.css';
 import '../../assets/styles/register.css';
-import { registerUser, reset } from '../../redux/actions/AuthAction';
+import { registerUser, reset } from '../../appStore/actions/AuthAction';
 import { connect } from "react-redux";
 import { Form } from "react-bootstrap";
 import Swal from 'sweetalert2';
@@ -263,7 +263,6 @@ const SignUp = ({error, success, registerUser, reset}) => {
                         </Form>)
                         : 
                         (<Form onSubmit={handleSubmit}>
-                             {loading && <div style={{marginLeft:"-20vw"}}><Preloader /></div>}
                             <div>
                                 <label htmlFor="residentialAddress">
                                     Residential Address:
@@ -358,7 +357,10 @@ const SignUp = ({error, success, registerUser, reset}) => {
                             </div>
                             
                             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-                            <input type="submit" value="Sign Up" disabled={!formData || !validPwd || !validMatch ? true : false} />
+                            <div className='signup-div'>
+                                <input type="submit" value="Sign Up" disabled={!formData || !validPwd || !validMatch ? true : false} />
+                                {loading && <Preloader />}
+                            </div>
                             <div className="forgot-password">
                                 <Link to="#!" onClick={prevStep}>Go Back</Link>
                             </div>

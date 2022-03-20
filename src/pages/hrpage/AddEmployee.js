@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 import {connect } from "react-redux";
 import Swal from 'sweetalert2';
-import { addEmployee, reset } from '../../redux/actions/EmployeeAction';
+import { addEmployee, reset } from '../../appStore/actions/EmployeeAction';
 import { Form, Button } from "react-bootstrap";
 import { confirmAlert } from 'react-confirm-alert';
 import Preloader from '../../components/Preloader';

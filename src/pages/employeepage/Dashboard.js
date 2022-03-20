@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { loadUser, loadEmployee } from "../../redux/actions/AuthAction";
+import { loadUser, loadEmployee } from "../../appStore/actions/AuthAction";
 import { Container, Row, Col } from "react-bootstrap";
 import Task from "../../components/Dashboard/Task/Task";
 import Holidays from "../../components/Dashboard/Holidays";

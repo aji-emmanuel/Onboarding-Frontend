@@ -74,6 +74,10 @@ input[type='submit'] {
   cursor: pointer;
 }
 
+.login-div{
+  position: relative;
+}
+
 .sub-main .forgot-password > a {
   text-decoration: none;
   margin-top: 20px;

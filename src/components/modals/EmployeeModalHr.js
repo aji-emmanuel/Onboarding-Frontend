@@ -3,7 +3,7 @@ import "../../assets/styles/modal.css";
 import PropTypes from "prop-types";
 import Swal from 'sweetalert2';
 import { connect } from "react-redux";
-import { updateEmployee, deleteEmployee, clearError, resetSuccess } from '../../redux/actions/EmployeeAction';
+import { updateEmployee, deleteEmployee, clearError, resetSuccess } from '../../appStore/actions/EmployeeAction';
 import { Card, Form, Button } from 'react-bootstrap';
 import M from 'materialize-css/dist/js/materialize.min.js';
 

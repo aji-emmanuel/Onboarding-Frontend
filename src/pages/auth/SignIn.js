@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/login.css';
 import { connect } from "react-redux";
-import { loginUser, reset } from "../../redux/actions/AuthAction";
+import { loginUser, reset } from "../../appStore/actions/AuthAction";
 import Preloader from '../../components/Preloader';
 import {ReactComponent as Welcome} from "../../assets/illustrations/onboarding.svg"
 
@@ -104,7 +104,7 @@ const SignIn = ({ isLoggedIn, error, reset, loginUser, ...props }) => {
                                 <Link to="/register">Register</Link>
                             </div>
                         </div>
-                        { loading && <Preloader /> }
+                       
                         <form onSubmit={handleSubmit}>
                             <div className="email">
                                 <label htmlFor="EmailAddress" required>Email:</label>
@@ -122,7 +122,10 @@ const SignIn = ({ isLoggedIn, error, reset, loginUser, ...props }) => {
                                         value={formData.password}
                                         onChange={handleInputData("Password")} required />
                             </div>
-                            <input  value="Login" type="submit" />
+                            <div className='login-div'>
+                                <input  value="Login" type="submit" />
+                                { loading && <Preloader /> }
+                            </div>
                              <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
                                 {errMsg}
                             </p>

@@ -1,8 +1,8 @@
 
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { loadUser, loadEmployee } from "../../redux/actions/AuthAction";
-import { getEmployees } from "../../redux/actions/EmployeeAction";
+import { loadUser, loadEmployee } from "../../appStore/actions/AuthAction";
+import { getEmployees } from "../../appStore/actions/EmployeeAction";
 import { Container, Row, Col } from "react-bootstrap";
 import Task from "../../components/Dashboard/Task/Task";
 import Statistics from "../../components/Dashboard/Statistics";

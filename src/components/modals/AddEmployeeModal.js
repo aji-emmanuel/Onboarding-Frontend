@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import "../../assets/styles/modal.css";
 import PropTypes from "prop-types";
 import {connect } from "react-redux";
-import { addEmployee } from '../../redux/actions/EmployeeAction';
+import { addEmployee } from '../../appStore/actions/EmployeeAction';
 import { Form, Button } from "react-bootstrap";
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
