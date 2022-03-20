@@ -237,7 +237,6 @@ th {
 }
 .waves-circle {
   transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%);
 }
 .waves-input-wrapper {
   border-radius: 0.2em;
@@ -255,7 +254,6 @@ th {
   height: 2.5em;
   line-height: 2.5em;
   border-radius: 50%;
-  -webkit-mask-image: none;
 }
 .waves-block {
   display: block;
@@ -712,9 +710,6 @@ html[dir='rtl'] #form .input-field {
 #form .input-field select {
   margin: 10px 0;
 }
-#form .input-field input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px white inset;
-}
 #form .input-field input[type='checkbox'] {
   width: auto;
 }
@@ -989,14 +984,12 @@ html[dir='rtl'] #form .input-field {
   background-size: 18px 18px;
   background-repeat: no-repeat;
   background-position: center center;
-  webkit-box-shadow: 0 4px 4px 0 #f2f2f7;
   -moz-box-shadow: 0 4px 4px 0 #f2f2f7;
   box-shadow: 0 4px 4px 0 #f2f2f7;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 .arrow-btn:hover {
-  webkit-box-shadow: 0 4px 4px 0 #e5e5ea;
   -moz-box-shadow: 0 4px 4px 0 #e5e5ea;
   box-shadow: 0 4px 4px 0 #e5e5ea;
   transform: translateY(-1px);
@@ -2873,6 +2866,7 @@ i {
   position: absolute;
   z-index: 1000;
 }
+
 .loader img{
   width: 50px !important;
 }

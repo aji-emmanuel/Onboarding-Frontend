@@ -78,61 +78,61 @@ const ForgotPassword = ({error, success, resetPassword, reset}) => {
         <div id='form-wrap'>
             <div className="main-container">
 
-                    <div className='forget'>
-                        <div>
-                            <h3>Reset your password</h3>
-                            <hr></hr>
-                            <h5>Please enter a valid password.</h5>
-                        </div>
-                        
-                        <form onSubmit={handleSubmit}>
-                             <div className="password">
-                                <label htmlFor="password">
-                                    New Password:
-                                    <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"} />
-                                    <FontAwesomeIcon icon={faTimes} className={validPwd || !formData.password ? "hide" : "invalid"} />
-                                </label> 
-                                <input type="password"
-                                        name="password"
-                                        value={formData.password}
-                                        ref={passwordRef}
-                                        onChange={handleInputData("password")}
-                                        onFocus={() => setPwdFocus(true)}
-                                        onBlur={() => setPwdFocus(false)} required />
-
-                                <p className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
-                                    <FontAwesomeIcon icon={faInfoCircle} />
-                                    8 to 24 characters.<br />
-                                    Must include uppercase and lowercase letters, a number and a special character.<br />
-                                    Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
-                                </p>
-                            </div>
-
-                            <div>
-                                <label htmlFor="password2">
-                                    Confirm Password:
-                                    <FontAwesomeIcon icon={faCheck} className={validMatch && validPwd ? "valid" : "hide"} />
-                                    <FontAwesomeIcon icon={faTimes} className={validMatch || !validPwd ? "hide" : "invalid"} />
-                                </label> 
-                                <input type="password"
-                                        name="confirmPassword"
-                                        value={formData.confirmPassword}
-                                        onChange={handleInputData("confirmPassword")} required/>
-
-                                <p className={!validMatch && formData.confirmPassword ? "instructions" : "offscreen"}>
-                                    <FontAwesomeIcon icon={faInfoCircle} />
-                                    Must match the first password input field.
-                                </p>
-                            </div>
-                            <div>
-                                <input  value="Submit" type="submit" />
-                                { loading && <Preloader /> }
-                            </div>
-                             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
-                                {errMsg}
-                            </p>
-                        </form>
+                <div className='forget'>
+                    <div>
+                        <h3>Reset your password</h3>
+                        <hr></hr>
+                        <h5>Please enter a valid password.</h5>
                     </div>
+                    
+                    <form onSubmit={handleSubmit}>
+                            <div className="password">
+                            <label htmlFor="password">
+                                New Password:
+                                <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"} />
+                                <FontAwesomeIcon icon={faTimes} className={validPwd || !formData.password ? "hide" : "invalid"} />
+                            </label> 
+                            <input type="password"
+                                    name="password"
+                                    value={formData.password}
+                                    ref={passwordRef}
+                                    onChange={handleInputData("password")}
+                                    onFocus={() => setPwdFocus(true)}
+                                    onBlur={() => setPwdFocus(false)} required />
+
+                            <p className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
+                                <FontAwesomeIcon icon={faInfoCircle} />
+                                8 to 24 characters.<br />
+                                Must include uppercase and lowercase letters, a number and a special character.<br />
+                                Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+                            </p>
+                        </div>
+
+                        <div>
+                            <label htmlFor="password2">
+                                Confirm Password:
+                                <FontAwesomeIcon icon={faCheck} className={validMatch && validPwd ? "valid" : "hide"} />
+                                <FontAwesomeIcon icon={faTimes} className={validMatch || !validPwd ? "hide" : "invalid"} />
+                            </label> 
+                            <input type="password"
+                                    name="confirmPassword"
+                                    value={formData.confirmPassword}
+                                    onChange={handleInputData("confirmPassword")} required/>
+
+                            <p className={!validMatch && formData.confirmPassword ? "instructions" : "offscreen"}>
+                                <FontAwesomeIcon icon={faInfoCircle} />
+                                Must match the first password input field.
+                            </p>
+                        </div>
+                        <div>
+                            <input  value="Submit" type="submit" />
+                            { loading && <Preloader /> }
+                        </div>
+                            <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
+                            {errMsg}
+                        </p>
+                    </form>
+                </div>
             </div>
         </div>
     );
