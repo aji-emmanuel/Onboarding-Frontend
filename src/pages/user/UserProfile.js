@@ -6,7 +6,11 @@ import UploadAvatarModal from '../../components/modals/UploadAvatarModal';
 import { Form, Button } from "react-bootstrap";
 import NavBar from '../../components/navbar/NavBar';
 import Preloader from '../../components/Preloader';
+<<<<<<< HEAD
 import { loadUser } from "../../appStore/actions/AuthAction";
+=======
+import { loadUser } from "../../redux/actions/AuthAction";
+>>>>>>> 109b059a944d55d9116d83cabd30631f6179f8f5
 import { updateUser, reset } from "../../redux/actions/UserAction";
 import { confirmAlert } from 'react-confirm-alert';
 

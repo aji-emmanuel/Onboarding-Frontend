@@ -5,7 +5,11 @@ import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import Swal from 'sweetalert2';
 import Preloader from "../../components/Preloader";
+<<<<<<< HEAD
 import { sendMail, mailEmployees, mailUsers, sendSlack, reset } from '../../appStore/actions/MessageAction';
+=======
+import { sendMail, mailEmployees, mailUsers, sendSlack, reset } from '../../redux/actions/MessageAction';
+>>>>>>> 109b059a944d55d9116d83cabd30631f6179f8f5
 
 const Messages = ({ success, messageError, sendMail, mailEmployees, mailUsers, sendSlack, reset }) => {
 
