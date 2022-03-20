@@ -1,0 +1,71 @@
+.add-employee {
+  padding: 0 2.5rem;
+}
+
+.form-header h4 {
+  color: #00364c;
+  font-weight: bold;
+  line-height: 0px;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+}
+.add-employee .main label {
+  font-size: 1rem !important;
+  color: #706c6c !important;
+}
+.add-employee .main .field {
+  margin-bottom: 0.8rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .add-employee {
+    padding: 0 1rem;
+  }
+  .main {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+  }
+  .form-header h4 {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 600px) {
+  .add-employee {
+    padding: 0 1rem;
+  }
+  .main {
+    margin-bottom: 1.5rem;
+    grid-column-gap: 30px;
+  }
+}
+
+.btn-flat.clear {
+  background: #e0e3e4;
+  color: black;
+  height: 3.5rem;
+  padding-top: 0.5rem;
+}
+
+.add-employee .space-between .btn {
+  font-size: 1rem;
+  line-height: 0px;
+  height: 3.5rem;
+  border-color: #00364c;
+}
+
+.add-employee .space-between .btn:hover {
+  opacity: 0.7 !important;
+  background-color: #00364c;
+  color: white;
+}
