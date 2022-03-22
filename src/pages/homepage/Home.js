@@ -1,13 +1,13 @@
 import React from 'react';
-import Footer from './Footer';
-import MainContent from './MainContent';
+import Footer from './footer/Footer';
+import MainContent from './content/MainContent';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <MainContent />
             <Footer />
-        </div>
+        </>
     );
 };
 

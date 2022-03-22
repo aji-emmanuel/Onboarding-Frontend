@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='about'>
                     <img className="logo" alt="Access logo" src={accesslogo} />
                     <p>
-                        Access HR is an employee onboarding app that is used to streamline and automate human resource management in Access Bank worldwide.
+                        Apt HR is an employee onboarding app that is used to streamline and automate human resource management and onboarding processes in an organisation.
                     </p>
                     <div className='social'>
                         <a href='#!' target='_blank' rel="noreferrer">
@@ -75,11 +75,10 @@ const Footer = () => {
                 </div>
             </div>
 
-
             <div className='content-width space-out'>
                 
                 <p className='copyright'>
-                    © Copyright Access Talent Team-Lion,
+                    © Copyright Apt HR,
                     2021
                 </p>
                
@@ -102,9 +101,8 @@ const Footer = () => {
                    
                 </div>
             </div>
-            
         </footer>
     );
 }
 
-export default Footer
+export default Footer;

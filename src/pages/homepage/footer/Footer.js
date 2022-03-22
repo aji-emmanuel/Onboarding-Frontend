@@ -1,16 +1,18 @@
 import React from 'react';
+import "./footer-style.css";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer>
-            <div className='content-width space-out'>
+            <div className='space-out'>
                 <div className='about'>
-                    <header className='footer-header'>
-                        Team-Lion HR
-                    </header>
+                    <h4>
+                        Apt HR
+                    </h4>
                     <p>
-                        This is an employee onboarding app that is used to streamline and automate human resource management in Team Lion Worldwide.
+                        This is an employee onboarding app that is used to streamline and automate human
+                         resource management and onboarding processes in an organisation.
                     </p>
                     <div className='social'>
                         <a href='#!' rel="noreferrer">
@@ -79,13 +81,12 @@ const Footer = () => {
             
             <div className='content-width space-out'>
                  <p className='copyright'>
-                    © Copyright Access Talent Team-Lion,
+                    © Copyright Apt HR,
                     2021
                 </p>
             </div>
-            
         </footer>
     );
 }
 
-export default Footer
+export default Footer;

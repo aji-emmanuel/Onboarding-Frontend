@@ -1,5 +1,5 @@
 import React from 'react';
-var spinner = require("../assets/images/loading-circle.gif");
+var spinner = require("../assets/images/spinner.gif");
 
 const Preloader = () => {
     return (
