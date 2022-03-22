@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.min.js';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import "./assets/css/scss/teamlion.scss?v=2.0.0";

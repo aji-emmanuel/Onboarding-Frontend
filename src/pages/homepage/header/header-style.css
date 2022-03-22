@@ -1,19 +1,15 @@
 /*-------header -------*/
 
 .navbar {
-  background-color: #104eb5;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
   padding: 5px 0 !important;
   transition: all 0.5s ease;
-}
-
-.navbar-nav {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  line-height: 20px;
 }
 
 .navbar.navbar-shrink {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  background-color: #104eb5;
+  background-color: #133252;
   padding: 10px 0;
 }
 .navbar > .container {
@@ -22,10 +18,10 @@
 
 .navbar .navbar-brand {
   color: #fe961c;
-  font-weight: 500;
   text-transform: capitalize;
   margin-left: 30px;
-  margin-top: 10px;
+  padding-top: 0;
+  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em blue;
 }
 
 .navbar .navbar-brand img {
@@ -51,9 +47,9 @@
 }
 
 .navbar .nav-item .nav-link {
-  color: #fff;
+  color: #133252;
   text-transform: capitalize;
-  font-size: 16px;
+  font-size: larger;
   font-weight: 400;
   padding: 10px 0 10px 15px;
   position: relative;
@@ -66,7 +62,7 @@
   bottom: 0;
   right: 0;
   height: 1px;
-  background-color: #fff;
+  background-color: #133252;
   transition: all 0.5s ease;
   transform: scale(0);
 }
@@ -75,9 +71,13 @@
 .navbar .nav-item .nav-link:hover::before {
   transform: scale(1);
 }
+.navbar .nav-items .nav-link.active::before,
+.navbar .nav-items .nav-link:hover::before {
+  transform: scale(1);
+}
 
 .navbar .nav-items .nav-link {
-  color: #fff;
+  color: #133252;
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 400;
@@ -92,14 +92,9 @@
   bottom: 0;
   right: 0;
   height: 1px;
-  background-color: #fff;
+  background-color: #133252;
   transition: all 0.5s ease;
   transform: scale(0);
-}
-
-.navbar .nav-items .nav-link.active::before,
-.navbar .nav-items .nav-link:hover::before {
-  transform: scale(1);
 }
 
 #spacer {
@@ -111,10 +106,9 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     height: 34px;
     width: 44px;
-    padding: 0;
     margin-right: 10px;
     font-size: 17px;
-    color: #ffffff;
+    color: #133252;
   }
 
   .navbar .nav-item {
@@ -124,7 +118,10 @@
 
   .navbar.navbar-shrink .navbar-toggler,
   .navbar.navbar-shrink .navbar-nav {
-    background-color: #104eb5;
+    background-color: #ffffff;
+  }
+  .navbar-toggler:focus {
+    background-color: #ffffff;
   }
 }
 
@@ -134,4 +131,8 @@
     width: fit-content;
     margin-left: auto;
   }
+}
+
+ul.navbar-nav.ml-auto{
+  background-color: #ffffff;
 }
