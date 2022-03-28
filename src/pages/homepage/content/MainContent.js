@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import "./content-style.css"
-import Header from "../header/Header";
 import stepone from "../../../assets/images/steps/one.svg"
 import steptwo from "../../../assets/images/steps/two.svg"
 import stepthree from "../../../assets/images/steps/three.svg"
@@ -23,8 +22,7 @@ const MainContent = () => {
 
     return (
 
-        <div>
-            <Header />
+        <>
             <section className='intro'>
                 <article>
                     <h4> Welcome to Apt HR! Creating amazing work-life experiences for our employees.</h4>
@@ -38,7 +36,7 @@ const MainContent = () => {
                 </div>
             </section>
 
-            <div className='productive-section'>
+            <section className='productive-section'>
                 <header>
                     <h4>We get productive instantly with a few simple steps</h4>
                 </header>
@@ -59,7 +57,7 @@ const MainContent = () => {
                         <p>We use filters to create custom reports and data rich company graphs.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <section class="home-apt">
                 <div class="apt-wave">
@@ -87,11 +85,6 @@ const MainContent = () => {
             </section>
 
             <section class="home-onboarding">
-                <div class="onboarding-wave">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path fill="#F2F5F0" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-                    </svg>
-                </div>
                 <div class="section-title">
                     <h2>Onboarding</h2>
                 </div>
@@ -175,8 +168,7 @@ const MainContent = () => {
                     </div>
                 </div>
             </section>
-
-        </div>
+        </>
     )
 }
 

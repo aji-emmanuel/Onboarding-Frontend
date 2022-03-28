@@ -1,0 +1,197 @@
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 0px;
+    background-image: url(../../../assets/images/login_circle.svg),
+      url(../../../assets/images/login_shapes.svg),
+      linear-gradient(45deg, #30cfd0 0%, #330867 100%);
+    background-size: 100%, cover;
+    background-repeat: repeat, no-repeat;
+    background-position: 0, 0;
+  }
+  .auth-welcome{
+    height: 30vw;
+    max-height: 100px;
+    margin: 0 auto;
+  }
+  .auth-welcome svg {
+    max-width: 400px;
+    width: 90vw;
+    height: 100px;
+  }
+  
+  /*----------- Log In ------------*/
+
+  .sub-main {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(241, 243, 244, 0.1);
+    border-radius: 20px;
+  }
+  .sub-main .username {
+    padding-top: 0.75rem;
+  }
+  .sub-main .username,
+  .sub-main .password {
+    margin: 10px 0;
+  }
+  .sub-main .heading {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+  }
+  .sub-main .heading h4{
+    margin: auto;
+  }
+  
+  .sub-main label {
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+  }
+  
+  input[type='text'],
+  input[type='password'],
+  input[type='submit'] {
+    margin-top: 10px;
+    padding: 15px 10px;
+    padding-top: 15px;
+    border-radius: 4px;
+    outline: none;
+  }
+  input[type='submit'] {
+    background-color: #fa553e;
+    color: white;
+    padding: 18px;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .login-div{
+    position: relative;
+  }
+  
+  .sub-main .forgot-password > a {
+    text-decoration: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    color: black;
+  }
+  
+  .sub-main .forgot-password > a:hover {
+    text-decoration: underline;
+  }
+  /*------------------------------------*/
+
+  /*----------- Register ----------------*/
+
+.sub-main .heading .register-in-line {
+    width: 100%;
+    background-color: #fa553e;
+    height: 3px;
+  }
+  
+  .sub-main .first-name {
+    padding-top: 0.75rem;
+  }
+  .sub-main .first-name,
+  .sub-main .last-name,
+  .sub-main .gender,
+  .sub-main .email,
+  .sub-main .phone,
+  .sub-main .dob,
+  .sub-main .address,
+  .sub-main .state {
+    margin: 10px 0;
+  }
+  
+  input[type='text'],
+  input[type='password'],
+  input[type='email'] {
+    padding: 6px 3px;
+    padding-top: 10px;
+    width: 100%;
+    border-radius: 15px;
+    outline: none;
+    border: 2px solid rgb(241, 243, 244);
+  }
+  
+  
+  input[type='submit']:hover {
+    opacity: 0.6;
+  }
+  
+  #reg-next {
+    background-color: #fa553e;
+    color: white;
+    border: none;
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #reg-next:hover {
+    opacity: 0.6;
+  }
+  
+  /*  Form Validations */
+  .instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+  }
+  
+  .instructions > svg {
+    margin-right: 0.25rem;
+  }
+  
+  .offscreen {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+  }
+  
+  .invalid {
+    color: red;
+    margin-left: 0.25rem;
+  }
+  
+  .errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .signup-div{
+    position: relative;
+  }
+
+  /*-----------------------------------*/
+  

@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../../assets/styles/login.css';
+import './css/auth-style.css';
 import { connect } from "react-redux";
+import Header from "../homepage/header/Header";
 import { loginUser, reset } from "../../appStore/actions/AuthAction";
 import Preloader from '../../components/Preloader';
 import {ReactComponent as Welcome} from "../../assets/illustrations/onboarding.svg"
@@ -83,25 +84,16 @@ const SignIn = ({ isLoggedIn, error, reset, loginUser, ...props }) => {
     };
           
     return (
-        <div id='form-wrap'>
-            <div className="main-container">
-                <div className="main">
-                    <div>
-                        <Link to="/" className='brandname'>
-                            <h4>Team-Lion</h4>
-                        </Link>
-                        <div>
-                            <Welcome />
-                        </div>
+        <>
+            <Header />
+            <div className="auth-container">
+                    <div className='auth-welcome'>
+                        <Welcome />
                     </div>
                     <div className='sub-main'>
                         <div className="heading">
-                            <div className="register">
-                                <Link  to="/login">Sign In</Link>
-                                <p className="sign-in-line"></p>
-                            </div>
-                            <div className="register">
-                                <Link to="/register">Register</Link>
+                            <div>
+                                <h4> Log In </h4>
                             </div>
                         </div>
                        
@@ -135,9 +127,8 @@ const SignIn = ({ isLoggedIn, error, reset, loginUser, ...props }) => {
                             <Link to="/forgot_password">Forgot password?</Link>
                         </div>
                     </div>
-                </div>
             </div>
-        </div>
+        </>
     );
 };
 

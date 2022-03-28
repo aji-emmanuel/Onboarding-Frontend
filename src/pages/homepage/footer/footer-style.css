@@ -1,6 +1,7 @@
 footer {
     background: #133252;
     padding: 30px 0 0px;
+    width: 100vw;
   }
 
   @media screen and (min-width:600px) {
@@ -48,7 +49,7 @@ footer {
     font-weight: bold;
     font-size: 20px;
     text-transform: uppercase;
-    color: #ffb500;
+    color: #fa553e;
     padding-bottom: 15px;
     margin: 0px;
   }
@@ -62,7 +63,7 @@ footer {
   }
   footer p.copyright {
     font-weight: normal;
-    color: #ffb500;
+    color: #fa553e;
     text-align: left;
     margin-left: 30px;
   }
@@ -92,7 +93,7 @@ footer {
   }
   footer .social a:hover {
     opacity: 0.7;
-    color: #ffb500;
+    color: #fa553e;
   }
   
   footer .mobile a {
@@ -102,7 +103,7 @@ footer {
     display: inline-block;
   }
   footer .mobile a:focus {
-    color: #ffb500 solid 3px;
+    color: #fa553e solid 3px;
   }
   @media only screen and (max-width: 960px) {
     footer .mobile a {
@@ -132,7 +133,7 @@ footer {
   
   footer .mobile a .img-btn:hover {
     transform: translateY(-2px);
-    background: #ffb500;
+    background: #fa553e;
   }
   footer .mobile a .apple {
     width: 165px;
@@ -185,7 +186,7 @@ footer {
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
-    color: #ffb500;
+    color: #fa553e;
     padding-bottom: 15px;
     margin-top: 0%;
   }
@@ -207,8 +208,8 @@ footer {
     font-size: 15px;
   }
   footer .links article ul a:hover {
-    color: #ffb500;
+    color: #fa553e;
   }
   footer .links article ul a:focus {
-    color: #ffb500;
+    color: #fa553e;
   }

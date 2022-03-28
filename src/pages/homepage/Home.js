@@ -5,11 +5,11 @@ import MainContent from './content/MainContent';
 
 const Home = () => {
     return (
-        <>
+        <main>
             <Header />
             <MainContent />
             <Footer />
-        </>
+        </main>
     );
 };
 

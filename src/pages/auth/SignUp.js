@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import '../../assets/styles/login.css';
-import '../../assets/styles/register.css';
+import './css/auth-style.css';
 import { registerUser, reset } from '../../appStore/actions/AuthAction';
 import { connect } from "react-redux";
 import { Form } from "react-bootstrap";

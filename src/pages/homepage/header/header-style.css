@@ -1,10 +1,11 @@
 /*-------header -------*/
 
 .navbar {
+  height: 45px;
   background-color: #ffffff;
-  padding: 5px 0 !important;
+  padding: 0 !important;
   transition: all 0.5s ease;
-  line-height: 20px;
+  line-height: 15px;
 }
 
 .navbar.navbar-shrink {
@@ -17,7 +18,7 @@
 }
 
 .navbar .navbar-brand {
-  color: #fe961c;
+  color: #fa553e;
   text-transform: capitalize;
   margin-left: 30px;
   padding-top: 0;

@@ -3,11 +3,11 @@
 
   .intro {
     position: relative;
-    background: #F9F3FA;
+    background: linear-gradient(45deg, #30cfd0 0%, #330867 100%);
     padding: 5rem 2rem 8rem;
   }
   .intro h4 {
-    color: #330867;
+    color: #ffffff;
     font-weight: bold;
     font-size: 28px;
     line-height: 1.4;
@@ -53,7 +53,7 @@
     position: relative;
   }
   .productive-section header{
-      color: #ffb500;
+      color: #fa553e;
       display: flex;
       justify-content: center;
       padding: 0 2rem;
@@ -122,7 +122,7 @@
   
     .home-apt{
         position:relative;
-        background-color:#f2f5f0;
+        background: linear-gradient(45deg, #30cfd0 0%, #ffffff 100%);
         padding:1px 3px 5px;
     }
     .apt-wave {
@@ -141,7 +141,7 @@
         font-size: large;
     }
     .apt-text h3{
-        color: #fe961c;
+        color: #330867;
         font-weight: bold;
         font-style: oblique;
     }
@@ -166,14 +166,6 @@
         background:linear-gradient(#fdfaf2,#ffe3ac);
         position: relative;
     }
-    .onboarding-wave {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-    }
 
     .section-title{
         text-align:center;
@@ -181,7 +173,7 @@
     }
 
     .section-title h2{
-        color: #fe961c;
+        color: #fa553e;
         font-weight: 1000;
         font-style: oblique;
         font-size: 2rem;
@@ -198,7 +190,7 @@
     .section-text{
         font-size: larger;
         text-align: justify;
-        color: #fe961c;
+        color: #fa553e;
     }
     @media screen and (min-width:600px){
         .section-text{
@@ -211,7 +203,6 @@
         width:100%;
         height: 70vw;
         max-height: 300px;
-        -webkit-box-shadow:0 33px 66px -44px rgba(179,81,0,.5),0 77px 110px -66px rgba(179,81,0,.25);
         box-shadow:0 33px 66px -44px rgba(179,81,0,.5),0 77px 110px -66px rgba(179,81,0,.25);
     }
     .apt-img{
@@ -255,14 +246,14 @@
     }
     
     .testimonial-wave .shape-fill {
-        fill: #330867;
+        fill: #37AEC0;
     }
     
 
   /*--- Testimonials ------*/
 
   .testimonials {
-    background: #330867;
+    background: #37AEC0;
     padding: 3rem 0;
     color: white;
   }
@@ -317,7 +308,7 @@
   }
   .testimonial .position{
     font-size: large;
-    color: #ffb500;
+    color: #fa553e;
   }
   .testimonial p{
     margin-bottom: 0;
