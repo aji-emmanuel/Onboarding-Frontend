@@ -1,17 +1,16 @@
 
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { loadUser, loadEmployee } from "../../appStore/actions/AuthAction";
+import { loadEmployee } from "../../appStore/actions/AuthAction";
 import { Container, Row, Col } from "react-bootstrap";
 import Task from "../../components/Dashboard/Task/Task";
 import Holidays from "../../components/Dashboard/Holidays";
 import Anniversary from "../../components/Dashboard/Anniversary/Anniversary";
 
 
-function Dashboard({loadUser, loggedUser, loadEmployee}) {
+function Dashboard({loggedEmployee, loadEmployee}) {
 
   useEffect(()=>{
-    loadUser();
     loadEmployee();
     // eslint-disable-next-line
   });
@@ -20,7 +19,7 @@ function Dashboard({loadUser, loggedUser, loadEmployee}) {
     <Container fluid>
       <section id="dashboard-welcome">
         <span>
-            Welcome, {loggedUser?.firstName} <i className="fas fa-user" />
+            Welcome, {loggedEmployee?.firstName} <i className="fas fa-user" />
         </span>
       </section>
 
@@ -40,7 +39,7 @@ function Dashboard({loadUser, loggedUser, loadEmployee}) {
 };
 
 const mapStateToProps = state =>({
-  loggedUser: state.auth.loggedUser
+  loggedEmployee: state.auth.loggedEmployee
 });
 
-export default connect(mapStateToProps, {loadUser, loadEmployee}) (Dashboard);
+export default connect(mapStateToProps, {loadEmployee}) (Dashboard);

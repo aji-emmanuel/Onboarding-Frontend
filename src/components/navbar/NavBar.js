@@ -1,25 +1,20 @@
 
-import React, { useEffect } from "react";
+import React from "react";
+//import './navbar-style.css';
 import { connect } from "react-redux";
-import { loadUser, logoutUser } from "../../appStore/actions/AuthAction";
+import { logoutUser } from "../../appStore/actions/AuthAction";
 import { Navbar, Nav, Dropdown, Button } from "react-bootstrap";
 
-const LayoutNavbar = ({onClick, loadUser, logoutUser}) => {
+const LayoutNavbar = ({onClick, logoutUser}) => {
 
-  useEffect(()=>{
-      loadUser();
-      // eslint-disable-next-line
-  });
-  var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+  var loggedEmployee = JSON.parse(localStorage.getItem('loggedEmployee'));
   var path;
-  let roles = localStorage.getItem('role');
-  if (roles?.includes('HR')){
+  let role = localStorage.getItem('role');
+  if (role === 'Hr'){
       path = "/hr/profile";
-  } else if (roles.includes('Employee')) {
+  } else if (role === 'Employee') {
       path = "/employee/profile";
-  } else {
-      path = "/user/profile";
-  };
+  }
 
   return (
     <Navbar expand="sm">
@@ -64,7 +59,7 @@ const LayoutNavbar = ({onClick, loadUser, logoutUser}) => {
                   href="#!"
                   onClick={(e) => e.preventDefault()}
                 >
-                  Welcome {loggedUser?.firstName}
+                  Welcome {loggedEmployee?.firstName}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
@@ -81,7 +76,7 @@ const LayoutNavbar = ({onClick, loadUser, logoutUser}) => {
               >
                 <span>
                   <i className="fa fa-user" aria-hidden="true"></i>
-                   {loggedUser?.firstName}
+                   {loggedEmployee?.firstName}
                   </span>
               </Dropdown.Toggle>
               <Dropdown.Menu aria-labelledby="navbarDropdownMenuLink">
@@ -110,4 +105,4 @@ const LayoutNavbar = ({onClick, loadUser, logoutUser}) => {
   );
 };
 
-export default connect(null, {loadUser, logoutUser}) (LayoutNavbar);
+export default connect(null, {logoutUser}) (LayoutNavbar);

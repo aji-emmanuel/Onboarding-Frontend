@@ -1,20 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-- My css -- */
 
 @import url(./assets/vendors/fontawesome5/all.min.css);
@@ -261,6 +246,7 @@ body {
   background-position: 0, 0;
   min-height: 100vh;
   padding: 20px;
+  display: flex;
 }
 /*==========================*/
 

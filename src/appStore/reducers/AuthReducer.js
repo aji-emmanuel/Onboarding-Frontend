@@ -1,7 +1,7 @@
-
+import jwt from "jwt-decode";
 
 import { REGISTER, LOGIN, LOGOUT, ERROR, SET_LOADING,
-         RESET, CONFIRM_USER, LOAD_USER, LOAD_EMPLOYEE} from "../Types";
+         RESET, CONFIRM_USER, LOAD_EMPLOYEE} from "../Types";
 
 const initialState = {
     token: localStorage.getItem('token'),
@@ -22,22 +22,16 @@ const AuthReducer = (state = initialState, action) =>  {
                 loading: false
             };
         case LOGIN:
+            const decode = jwt(action.payload.token);
             localStorage.setItem('token', action.payload.token);
-            localStorage.setItem('userId', action.payload.userId);
-            localStorage.setItem('employeeId', action.payload.employeeId);
-            localStorage.setItem('role', action.payload.role);
+            localStorage.setItem('employeeId', action.payload.id);
+            localStorage.setItem('role', Object.values(decode)[1]);
             localStorage.setItem('isLoggedIn', true);
             return {
                 ...state,
                 success: true,
                 isLoggedIn: true,
                 loading: false
-            };
-        case LOAD_USER:
-            localStorage.setItem('loggedUser', JSON.stringify(action.payload))
-            return {
-                ...state,
-                loggedUser: action.payload
             };
         case LOAD_EMPLOYEE:
             localStorage.setItem('loggedEmployee', JSON.stringify(action.payload))

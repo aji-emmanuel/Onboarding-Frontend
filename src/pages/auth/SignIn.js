@@ -10,7 +10,7 @@ import {ReactComponent as Welcome} from "../../assets/illustrations/onboarding.s
 const SignIn = ({ isLoggedIn, error, reset, loginUser, ...props }) => {
     // Initial form state
     const initialState = {
-        EmailAddress:"",
+        Email:"",
         Password:""
     }
 
@@ -28,13 +28,15 @@ const SignIn = ({ isLoggedIn, error, reset, loginUser, ...props }) => {
     }, [isLoggedIn]);
 
     const redirect = () =>{
-        let roles = localStorage.getItem('role');
-        if(roles.includes('HR')){
+        let role = localStorage.getItem('role');
+        if(role === "Admin"){
+            props.history.push('/admin/dashboard');
+        }else if (role ==='Hr'){
             props.history.push('/hr/dashboard');
-        } else if (roles.includes('Employee')){
+        }else if (role ==='Employee'){
             props.history.push('/employee/dashboard');
-        } else{
-            props.history.push('/user');
+        }else{
+            props.history.push('/unauthorized');
         };
     };
 
@@ -99,13 +101,13 @@ const SignIn = ({ isLoggedIn, error, reset, loginUser, ...props }) => {
                        
                         <form onSubmit={handleSubmit}>
                             <div className="email">
-                                <label htmlFor="EmailAddress" required>Email:</label>
+                                <label htmlFor="Email" required>Email:</label>
                                 <input type="email"
-                                        name="EmailAddress"
+                                        name="Email"
                                         ref={emailRef}
                                         autoComplete='off'
                                         value={formData.EmailAddress}
-                                        onChange={handleInputData("EmailAddress")} required />
+                                        onChange={handleInputData("Email")} required />
                             </div>
                             <div className="password">
                                 <label htmlFor="Password">Password:</label> 

@@ -14,7 +14,7 @@ const Layout = () => {
     const mainPanel = useRef(null);
     var routes;
     let roles = localStorage.getItem('role');
-    if(roles.includes('HR')){
+    if(roles.includes('Hr')){
         routes = HrRoutes;
     } else if(roles.includes('Employee')) {
         routes = EmployeeRoutes;
@@ -29,7 +29,7 @@ const Layout = () => {
                     <RoleBasedRoute
                         path={prop.layout + prop.path}
                         component={prop.component}
-                        role={"HR"}
+                        role={"Hr"}
                         key={key}
                     />
                 );
@@ -64,9 +64,9 @@ const Layout = () => {
             <div className="content">
                 <Switch>
                     {getRoutes(routes)}
-                    <RoleBasedRoute exact path="/hr/employee" component={EmployeeProfile} role={"HR"} />
+                    <RoleBasedRoute exact path="/hr/employee" component={EmployeeProfile} role={"Hr"} />
                     <RoleBasedRoute exact path="/employee/employee" component={EmployeeProfile2} role={"Employee"} />
-                    <RoleBasedRoute exact path="/hr/add_employee" component={AddEmployee} role={"HR"} />
+                    <RoleBasedRoute exact path="/hr/add_employee" component={AddEmployee} role={"Hr"} />
                 </Switch>
             </div>
         </div>

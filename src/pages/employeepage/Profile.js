@@ -5,13 +5,11 @@ import Swal from 'sweetalert2';
 import { Form, Button } from "react-bootstrap";
 import Preloader from '../../components/Preloader';
 import UploadAvatarModal from '../../components/modals/UploadAvatarModal';
-import { loadUser } from "../../appStore/actions/AuthAction";
 import { updateUser, reset } from "../../appStore/actions/UserAction";
 import { confirmAlert } from 'react-confirm-alert';
 
 const Profile = ({ success, error, updateUser, reset }) => {
 
-    var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
     var loggedEmployee = JSON.parse(localStorage.getItem('loggedEmployee'));
 
     useEffect(()=>{
@@ -26,19 +24,19 @@ const Profile = ({ success, error, updateUser, reset }) => {
     const [show, setShow] = useState(false);
     // Initial state of form values
     const initialState = {
-        firstName: loggedUser?.firstName,
-        middleName: loggedUser?.middleName,
-        lastName: loggedUser?.lastName,
-        email: loggedUser?.email,
-        phoneNumber: loggedUser?.phoneNumber,
-        gender: loggedUser?.gender,
-        dateOfBirth: loggedUser?.dateOfBirth,
-        residentialAddress: loggedUser?.residentialAddress,
-        cityOfResidence: loggedUser?.cityOfResidence,
-        stateOfResidence: loggedUser?.stateofResidence,
-        stateOfOrigin: loggedUser?.stateofOrigin,
-        countryOfOrigin: loggedUser?.countryOfOrigin,
-        avatar: loggedUser?.avatar
+        firstName: loggedEmployee?.firstName,
+        middleName: loggedEmployee?.middleName,
+        lastName: loggedEmployee?.lastName,
+        email: loggedEmployee?.email,
+        phoneNumber: loggedEmployee?.phone,
+        gender: loggedEmployee?.gender,
+        dateOfBirth: loggedEmployee?.dateOfBirth,
+        residentialAddress: loggedEmployee?.residentialAddress,
+        cityOfResidence: loggedEmployee?.cityOfResidence,
+        stateOfResidence: loggedEmployee?.stateofResidence,
+        stateOfOrigin: loggedEmployee?.stateofOrigin,
+        countryOfOrigin: loggedEmployee?.countryOfOrigin,
+        avatar: loggedEmployee?.avatar
     };
     const [formData, setFormData] = useState(initialState);
     // Sets active tab 
@@ -343,4 +341,4 @@ const mapStateToProps = state =>({
     error: state.user.error
 });
 
-export default connect(mapStateToProps, {updateUser, loadUser, reset}) (Profile);
+export default connect(mapStateToProps, {updateUser, reset}) (Profile);

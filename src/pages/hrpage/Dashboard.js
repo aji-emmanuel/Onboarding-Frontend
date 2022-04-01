@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { loadUser, loadEmployee } from "../../appStore/actions/AuthAction";
+import { loadEmployee } from "../../appStore/actions/AuthAction";
 import { getEmployees } from "../../appStore/actions/EmployeeAction";
 import { Container, Row, Col } from "react-bootstrap";
 import Task from "../../components/Dashboard/Task/Task";
@@ -10,11 +10,9 @@ import Holidays from "../../components/Dashboard/Holidays";
 import Anniversary from "../../components/Dashboard/Anniversary/Anniversary";
 
 
-function Dashboard({loadUser, loadEmployee, getEmployees}) {
+function Dashboard({loadEmployee, getEmployees}) {
 
   useEffect(()=>{
-    // Loads loggedIn user details
-    loadUser();
     // Loads loggedIn employee details
     loadEmployee();
     // Loads all employees
@@ -22,13 +20,13 @@ function Dashboard({loadUser, loadEmployee, getEmployees}) {
     // eslint-disable-next-line
   });
 
-  var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+  var loggedEmployee = JSON.parse(localStorage.getItem('loggedEmployee'));
 
   return (
     <Container fluid>
       <section id="dashboard-welcome">
         <span>
-            Welcome, {loggedUser?.firstName} <i className="fas fa-user" />
+            Welcome, {loggedEmployee?.firstName} <i className="fas fa-user" />
         </span>
       </section>
 
@@ -49,4 +47,4 @@ function Dashboard({loadUser, loadEmployee, getEmployees}) {
   );
 };
 
-export default connect(null, {loadUser, loadEmployee, getEmployees}) (Dashboard);
+export default connect(null, {loadEmployee, getEmployees}) (Dashboard);

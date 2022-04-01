@@ -13,7 +13,7 @@ const EmployeeItem = ({ employee, getEmployee }) => {
     const { firstName, lastName, designation, avatar } = employee;
     var path;
     let roles = localStorage.getItem('role');
-    if (roles.includes('HR')){
+    if (roles.includes('Hr')){
         path = "/hr/employee";
     } else {
         path = "/employee/employee";

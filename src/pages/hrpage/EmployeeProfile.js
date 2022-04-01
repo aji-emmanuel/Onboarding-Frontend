@@ -16,7 +16,7 @@ const EmployeeProfile = ({error, success, reset, updateEmployee, deleteEmployee}
     const [employeeUpdate, setEmployee] = useState(employee);
 
     const { employeeId, avatar, firstName, middleName, lastName, gender, dateOfBirth, 
-            phoneNumber, workEmail, designation, department, employeeStartDate, 
+            phone, workEmail, designation, department, employeeStartDate, 
             employmentStatus, salary } = employeeUpdate;
         
     useEffect(()=>{
@@ -95,7 +95,7 @@ const EmployeeProfile = ({error, success, reset, updateEmployee, deleteEmployee}
                             />
                         </div>
                         <div id="center">
-                            <h3 className="title">{firstName+" "+middleName+" "+lastName}</h3>
+                            <h3 className="title">{firstName} {middleName == null?"":middleName} {lastName}</h3>
                         </div> 
                     </div>
                     <hr></hr>
@@ -112,7 +112,7 @@ const EmployeeProfile = ({error, success, reset, updateEmployee, deleteEmployee}
                                 <label htmlFor="gender">Phone Number:</label>
                                 <input type="text" 
                                         name="phoneNumber"
-                                        value={phoneNumber} disabled/>
+                                        value={phone} disabled/>
                             </div>
 
                                 <div>

@@ -12,8 +12,6 @@ import SignUp from './pages/auth/SignUp';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import ResetPassword from './pages/auth/ResetPassword';
 import Unathourized from './pages/auth/Unathourized';
-import User from "./pages/user/User";
-import UserProfile from './pages/user/UserProfile';
 import Layout from "./components/layout/Layout";
 import { Provider } from "react-redux";
 import store from './appStore/store/Store';
@@ -37,8 +35,6 @@ function App() {
           <PrivateRoute path="/hr" component={(props) => <Layout {...props} />} />
           <PrivateRoute path="/employee" component={(props) => <Layout {...props} />} />
           <Route exact path="/" component = {Home} />
-          <PrivateRoute exact path="/user" component ={User} />
-          <PrivateRoute exact path="/user/profile" component ={UserProfile} />
           <Route exact path="/login" component={SignIn} />
           <Route exact path="/register" component={SignUp} />
           <Route exact path="/forgot_password" component={ForgotPassword} />

@@ -60,7 +60,6 @@ const ForgotPassword = ({error, success, confirmUser, reset}) => {
 
     return (
         <div id='form-wrap'>
-            <div className="main-container">
 
                     <div className='forget'>
                         <div>
@@ -96,7 +95,6 @@ const ForgotPassword = ({error, success, confirmUser, reset}) => {
                         </form>
                     </div>
                     
-            </div>
         </div>
     );
 };

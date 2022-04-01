@@ -8,7 +8,7 @@ import { GET_EMPLOYEES, GET_EMPLOYEE, ADD_EMPLOYEE, UPDATE_EMPLOYEE,
     export const getEmployees = () => async dispatch => {
         try{
             setLoading();
-            const response = await axios.get("api/Employees");
+            const response = await axios.get("api/Employee/all-employees");
             dispatch({ type: GET_EMPLOYEES, payload: response?.data?.data });
 
         } catch (err){
@@ -61,7 +61,7 @@ import { GET_EMPLOYEES, GET_EMPLOYEE, ADD_EMPLOYEE, UPDATE_EMPLOYEE,
     export const deleteEmployee = (id) => async dispatch =>{
         try {
             setLoading();
-            await axios.delete(`api/Employees/${id}`);
+            await axios.delete(`api/Employee/${id}`);
             dispatch({type: DELETE_EMPLOYEE, payload: id});
         } catch (error) {
             dispatch({ type: ERROR, payload: error?.response?.data});

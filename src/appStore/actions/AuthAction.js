@@ -1,6 +1,6 @@
 import axios from "../axios";
 import { REGISTER, LOGIN, LOGOUT, ERROR, SET_LOADING, CONFIRM_USER,
-         RESET, LOAD_USER, LOAD_EMPLOYEE } from "../Types";
+         RESET, LOAD_EMPLOYEE } from "../Types";
 
 // Logs in a user
 export const loginUser = (formData) => async dispatch => {
@@ -12,9 +12,10 @@ export const loginUser = (formData) => async dispatch => {
     };
     try {
         setLoading();
-        const response = await axios.post('api/Account/login',
+        const response = await axios.post('api/Auth/login',
                         formData, config);
-        dispatch({ type: LOGIN, payload: response?.data.payload});
+                        console.log(response)
+        dispatch({ type: LOGIN, payload: response?.data.data});
     } catch (err) {
         dispatch({ type: ERROR, payload: err})
     };
@@ -68,20 +69,21 @@ export const resetPassword = (formData) => async dispatch => {
 };
 
 // Gets details of logged in user
-    export const loadUser = () => async dispatch =>{
-        let userId = localStorage.getItem('userId');
-        try {
-            const response = await axios.get(`api/User/${userId}`);
-            dispatch({ type: LOAD_USER, payload: response.data.data});
-        } catch (err) {
-            dispatch({ type: ERROR, payload: err});
-        }
-    }
-// Gets employee details of logged user
+    // export const loadUser = () => async dispatch =>{
+    //     let userId = localStorage.getItem('userId');
+    //     try {
+    //         const response = await axios.get(`api/User/${userId}`);
+    //         dispatch({ type: LOAD_USER, payload: response.data.data});
+    //     } catch (err) {
+    //         dispatch({ type: ERROR, payload: err});
+    //     }
+    // }
+
+// Gets details of logged in employee.
     export const loadEmployee = () => async dispatch =>{
-        let employeeId = localStorage.getItem('employeeId');
+        let id = localStorage.getItem('employeeId');
          try {
-            const response = await axios.get(`/api/Employees/${employeeId}`);
+            const response = await axios.get(`/api/Employee/${id}`);
             dispatch({ type: LOAD_EMPLOYEE, payload: response.data.data});
         } catch (err) {
             dispatch({ type: ERROR, payload: err});
